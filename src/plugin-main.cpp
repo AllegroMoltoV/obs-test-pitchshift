@@ -1,12 +1,14 @@
-#include <obs-module.h>
+﻿#include <obs-module.h>
 #include <plugin-support.h>
 
 OBS_DECLARE_MODULE()
 OBS_MODULE_USE_DEFAULT_LOCALE(PLUGIN_NAME, "en-US")
 
+void register_test_pitchshift_filter(void);
+
 extern "C" bool obs_module_load(void)
 {
-	// 日本語を含んだファイルビルドのテスト
+	register_test_pitchshift_filter();
 	obs_log(LOG_INFO, "plugin loaded successfully (version %s)", PLUGIN_VERSION);
 	return true;
 }
