@@ -6,6 +6,7 @@ OBS_MODULE_USE_DEFAULT_LOCALE(PLUGIN_NAME, "en-US")
 
 extern "C" bool obs_module_load(void)
 {
+	// 日本語を含んだファイルビルドのテスト
 	obs_log(LOG_INFO, "plugin loaded successfully (version %s)", PLUGIN_VERSION);
 	return true;
 }
